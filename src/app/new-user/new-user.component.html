@@ -1,0 +1,82 @@
+
+<h1 class="text-left pl-4" [routerLink]="['/']" routerLinkActive="router-link-active"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
+</svg></h1>
+<h1 style="text-align: center;" class=""> Create New User</h1>
+<div class="container justify-contant-center">
+  <div class="row justify-content-center mt-5">
+    <div class="col-md-8">
+      <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="username">name</label>
+          <input
+            type="text"
+            id="name"
+            formControlName="name"
+            class="form-control"
+          />
+
+          <span
+            *ngIf="
+              !signupForm.get('name').valid && signupForm.get('name').touched
+            "
+            class="help-block"
+          >
+            Name is required
+          </span>
+        </div>
+        <div class="form-group">
+          <label class="input-label">gender</label>
+          <select id="gender" class="input-field" formControlName="gender">
+            <option value="male">Male</option>
+            <option value="female">female</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="email">mail</label>
+          <input
+            type="email"
+            id="email"
+            formControlName="email"
+            class="form-control"
+          />
+          <span
+            *ngIf="
+              !signupForm.get('email').valid && signupForm.get('email').touched
+            "
+            class="help-block"
+          >
+            please enter a valid email
+          </span>
+        </div>
+
+        <div class="form-group">
+          <label class="input-label">Status</label>
+          <select id="status" formControlName="status" class="input-field">
+            <option value="active">active</option>
+            <option value="inactive">inactive</option>
+          </select>
+        </div>
+
+        <br />
+        <span
+          *ngIf="!signupForm.valid && signupForm.touched"
+          class="help-block"
+        >
+          please enter a valid data
+        </span>
+        <button
+          class="btn btn-primary mr-2"
+          type="submit"
+          [disabled]="!signupForm.valid"
+        >
+          save
+        </button>
+        <button class="btn btn-danger" type="submit" (click)="cancel()">
+          cancel
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

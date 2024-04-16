@@ -1,0 +1,10 @@
+.input-label {
+    width: 100% !important;
+  }
+  .input-field{
+      width: 100% !important;
+      padding: .375rem .75rem !important;
+      color: #495057 !important;
+      border: 1px solid #ced4da !important;
+  }
+  
