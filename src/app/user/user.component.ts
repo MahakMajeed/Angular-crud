@@ -9,7 +9,6 @@ import { UserService } from '../user.service';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent {
-  title='mahak';
   userdata:any;
   dataid:any;
   fetchData:any;
@@ -28,23 +27,7 @@ export class UserComponent {
 })
 
   }
-  
-
-
-getid(id:any){
-//  console.log(id)
-//   this.dataid=id;
-//   this.userService.getOneData(this.dataid).subscribe(id => {
-//     this.fetchData = id;
-//     console.log(this.fetchData)
-//  this.data=this.fetchData
-//  console.log(this.data)
-
-    // this.newobj.name=this.fetchData.name;
-    // this.email=this.fetchData.email;
-    // this.gender=this.fetchData.gender;
-    // this.status=this.fetchData.status;
-} }
+   }
    
  
 
