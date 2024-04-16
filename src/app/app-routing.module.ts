@@ -9,13 +9,6 @@ const routes: Routes = [
    {path:'', component:UserComponent},
    {path:'new', component:NewUserComponent },
    {path:'edit/:id', component:EditUserComponent},
-
-  //  {
-  //   path:'', component:UserComponent,
-  //   children:[
-  //     {path:'edit/:id', component:EditUserComponent}
-  //   ]
-  // }
 ];
 
 @NgModule({
